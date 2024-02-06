@@ -4,6 +4,14 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
   const CurrencyConverterMaterialPage({super.key});
   @override
   Widget build(BuildContext context) {
+    final border = OutlineInputBorder(
+      borderSide: const BorderSide(
+        width: 2.0,
+        style: BorderStyle.solid,
+      ),
+      borderRadius: BorderRadius.circular(5),
+    );
+
     return Scaffold(
       backgroundColor: Colors.blueGrey,
       body: Center(
@@ -32,12 +40,8 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                 prefixIconColor: Colors.black,
                 filled: true,
                 fillColor: Colors.white,
-                focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      width: 2.0,
-                      style: BorderStyle.solid,
-                    ),
-                    borderRadius: BorderRadius.circular(60)),
+                focusedBorder: border,
+                enabledBorder: border,
               ),
             )
           ],
